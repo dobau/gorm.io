@@ -7,8 +7,8 @@ Set multiple fields as primary key creates composite primary key, for example:
 
 ```go
 type Product struct {
-  ID           string `gorm:"primaryKey"`
-  LanguageCode string `gorm:"primaryKey"`
+  ID           string `gorm:"primary_key"`
+  LanguageCode string `gorm:"primary_key"`
   Code         string
   Name         string
 }
@@ -18,7 +18,7 @@ type Product struct {
 
 ```go
 type Product struct {
-  CategoryID uint64 `gorm:"primaryKey;autoIncrement:false"`
-  TypeID     uint64 `gorm:"primaryKey;autoIncrement:false"`
+  CategoryID uint64 `gorm:"primary_key;auto_increment:false"`
+  TypeID     uint64 `gorm:"primary_key;auto_increment:false"`
 }
 ```
